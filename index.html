@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Valodex | Collect Skins</title>
+</head>
+<html lang="en">
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="index.css" type="text/css">
+
+<body>
+
+    <div id="image_overlay">
+        <div id="overlayContent">
+            <img id="overlayImage">
+        </div>
+    </div>
+
+    <div id="backup_overlay" onclick="closeDiv()">
+        <div id="backup_menu">
+          <h3 >BackUp-Key Options</h3>
+            <table>
+                <tr>
+                    <td id="td_copyBackUpKey"><button onclick="copyBackUpKey()" class="copyBackUpKey_button">copy current</button></td>
+                    </tr>
+                <tr>
+                    <td><button onclick="uploadBackUpKey()" class="uploadBackUpKey_button">upload new</button><input type="text" id="textInput" placeholder="BackUp-Key"></td>
+                </tr>
+            </table>
+          
+        </div>
+    </div>
+
+    <div id="menubar">
+        <table id="menutable">
+            <tr>
+                <td class="menu_left">
+                    <img id="viewmode_icon" src="images/icons/menu_list.png" alt="list" onclick="changeViewMode(this)" title="change view mode">
+                </td>
+                <td class="menu_left">
+                    <img id="sort_icon" src="images/icons/menu_a_z.png" onclick="sortThemes()" title="sort the content">
+                </td>
+                <td class="menu_left">
+                    <!-- <img id="key_icon" src="images/icons/menu_key.png" onclick="copyBackUpKey()" title="copy BackUp-Key"> -->
+                    <img id="key_icon" src="images/icons/menu_key.png" onclick="openDiv()" title="copy BackUp-Key">
+                </td>
+                <td class="menu_left">
+                    <a href="https://playvalorant.com/" target="_blank">
+                    <img id="valorant_icon" src="images/icons/valorant_icon.png" title="play Valorant">
+                    </a>
+                </td>
+                <td class="menu_left">
+                    <input type="text" id="filterInput" placeholder="Search">
+                </td>
+                
+                <td class="menu_right">
+                    <h3 id="counter"></h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="themes_container"></div>
+
+    <footer>
+        <!-- add infos here -->
+    </footer>
+</body>
+
+<script src="index.js">
+    
+</script>
+</html>
