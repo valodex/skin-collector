@@ -110,6 +110,8 @@ function addThemesToWebsite(){
             td_image.classList.add("image_td");
             const image = document.createElement("img");
             image.classList.add("image_skin");
+            image.loading = "lazy";
+            
             if(weaponName == "Phantom"){
                 image.style.height = "38px";
             }
