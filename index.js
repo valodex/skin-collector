@@ -21,15 +21,15 @@ async function startPage(){
     try {
         await getApiThemes();
         try {
-            await getApiSkins();
-            setTimeout(function() {
+            await getApiSkins()
+            // await setTimeout(function() {
                 addThemesToWebsite();
 
                 const counter = document.getElementById("counter");
                 counter.textContent = updateCollectedCounter() + "/" + (skinArray.length - 2*18);
                 imageZoom();
                 sortThemes();
-              }, 1000);                  //your internet might me to slow and this website isn't optimized lol
+            //   }, 1000);                  //your internet might me to slow and this website isn't optimized lol
         } catch (error) {
             console.error('Error:', error);
         }
@@ -42,7 +42,7 @@ async function startPage(){
 
 // API calls
 async function getApiSkins(){
-    fetch('https://valorant-api.com/v1/weapons/skins')
+    await fetch('https://valorant-api.com/v1/weapons/skins')
     .then(response => response.json())
     .then(responseData => {
         const dataArray = responseData.data;
@@ -81,7 +81,7 @@ async function getApiSkins(){
 }
 
 async function getApiThemes(){
-    fetch('https://valorant-api.com/v1/themes')
+    await fetch('https://valorant-api.com/v1/themes')
     .then(response => response.json())
     .then(responseData => {
         const dataArray = responseData.data;
